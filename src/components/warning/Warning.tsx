@@ -3,7 +3,7 @@ import { AuthContext } from "../../contexts";
 
 export default function Warning() {
   const { wardrop, close, messages } = useContext(AuthContext);
-  const wartext = messages.map((item, index) => (
+  const wartext = [messages].flat().map((item, index) => (
     <p className="font-normal text-2xl text-red-500 text-center" key={index}>
       {item}
     </p>
